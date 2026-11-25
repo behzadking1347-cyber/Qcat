@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qcat"
+version = "0.1.0"
+description = "A friendly Python toolkit for game development, math, and data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Qcat contributors" }]
+keywords = ["game-development", "pygame", "numpy", "pandas", "education"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Games/Entertainment",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "pygame>=2.5",
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/behzadking1347-cyber/Qcat"
+Repository = "https://github.com/behzadking1347-cyber/Qcat"
+Issues = "https://github.com/behzadking1347-cyber/Qcat/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
